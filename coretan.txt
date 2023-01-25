@@ -1,0 +1,48 @@
+from fastapi import FastAPI, Request, status
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+@app.get("/home")
+async def index():
+    return JSONResponse(
+        content = {
+            "ok": True,
+            "code": 200,
+            "data": {"version": "1.0.0"},
+            "message": "Success"
+        }
+    )
+    
+@app.get("/sentiment")
+async def index():
+    return JSONResponse(
+        content = {
+            "ok": True,
+            "code": 200,
+            "data": {"version": "1.0.0"},
+            "message": "Success"
+        }
+    )
+    
+@app.get("/cleansing-text")
+async def index():
+    return JSONResponse(
+        content = {
+            "ok": True,
+            "code": 200,
+            "data": {"version": "1.0.0"},
+            "message": "Success"
+        }
+    )
+    
+@app.get("/cleansing-file")
+async def index():
+    return JSONResponse(
+        content = {
+            "ok": True,
+            "code": 200,
+            "data": {"version": "1.0.0"},
+            "message": "Success"
+        }
+    )
